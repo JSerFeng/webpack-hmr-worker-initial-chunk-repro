@@ -1,0 +1,16 @@
+{
+  "name": "webpack-hmr-worker-initial-chunk-repro",
+  "private": true,
+  "version": "1.0.0",
+  "description": "A running Worker cannot acquire a new initial split dependency through HMR",
+  "scripts": {
+    "test": "node reproduce.cjs",
+    "test:control": "node reproduce.cjs --control"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "webpack": "5.112.2"
+  }
+}

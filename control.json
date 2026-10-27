@@ -1,0 +1,141 @@
+{
+  "webpack": "5.112.2",
+  "node": "v22.23.4",
+  "control": true,
+  "initial": {
+    "ready": true,
+    "value": 1
+  },
+  "update": {
+    "updated": [
+      "./dep.js",
+      "./page.js"
+    ],
+    "value": 2,
+    "status": "idle"
+  },
+  "expected": 2,
+  "builds": [
+    {
+      "label": "initial",
+      "hash": "66ec451d2177a2c0a32b",
+      "entries": {
+        "main": [
+          "main.js"
+        ]
+      },
+      "chunks": [
+        {
+          "id": "main",
+          "runtime": [
+            "main"
+          ],
+          "modules": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "./index.js"
+          ]
+        },
+        {
+          "id": "worker_js",
+          "runtime": [
+            "a4291b531e90a0ccd153"
+          ],
+          "modules": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "./page.js",
+            "./worker.js",
+            "node:worker_threads"
+          ]
+        }
+      ],
+      "manifests": {}
+    },
+    {
+      "label": "worker page acquires split dep",
+      "hash": "860258ba0626fc5439ae",
+      "entries": {
+        "main": [
+          "main.js",
+          "main.66ec451d2177a2c0a32b.hot-update.js"
+        ]
+      },
+      "chunks": [
+        {
+          "id": "main",
+          "runtime": [
+            "main"
+          ],
+          "modules": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "./index.js"
+          ]
+        },
+        {
+          "id": "worker_js",
+          "runtime": [
+            "a4291b531e90a0ccd153"
+          ],
+          "modules": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "./dep.js",
+            "./page.js",
+            "./worker.js",
+            "node:worker_threads"
+          ]
+        }
+      ],
+      "manifests": {
+        "main.66ec451d2177a2c0a32b.hot-update.json": {
+          "c": [
+            "main"
+          ],
+          "r": [],
+          "m": [],
+          "css": {
+            "r": [
+              "main"
+            ]
+          }
+        },
+        "a4291b531e90a0ccd153.66ec451d2177a2c0a32b.hot-update.json": {
+          "c": [
+            "worker_js"
+          ],
+          "r": [],
+          "m": [],
+          "css": {
+            "r": [
+              "worker_js"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
